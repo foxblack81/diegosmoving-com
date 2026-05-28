@@ -138,12 +138,12 @@
     .hero { position: relative; overflow: hidden; background: radial-gradient(circle at 80% 10%, rgba(229,9,20,.25), transparent 35%), linear-gradient(135deg, #070707 0%, #171717 48%, #2b0709 100%); color: var(--white); min-height: 720px; display: grid; align-items: center; }
     .hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(to bottom, black, transparent 90%); opacity: .35; }
     .hero-wrap { position: relative; width: min(1180px, 90%); margin: auto; display: grid; grid-template-columns: 1.05fr .95fr; gap: 54px; align-items: center; padding: 90px 0; }
-    .promo-star { position: absolute; top: 28px; right: max(24px, calc((100vw - 1180px) / 2)); z-index: 2; width: 156px; aspect-ratio: 1; display: grid; place-items: center; background: linear-gradient(145deg, #ffd84d 0%, #ff9f1c 48%, #e50914 100%); color: #090909; clip-path: polygon(50% 0%, 61% 34%, 98% 35%, 68% 56%, 79% 91%, 50% 70%, 21% 91%, 32% 56%, 2% 35%, 39% 34%); filter: drop-shadow(0 22px 36px rgba(0,0,0,.38)); transform: rotate(8deg); }
-    .promo-star::before { content: ''; position: absolute; inset: 14px; background: rgba(255,255,255,.18); clip-path: inherit; }
-    .promo-star span { position: relative; display: grid; gap: 1px; place-items: center; max-width: 98px; text-align: center; line-height: .94; text-transform: uppercase; font-weight: 900; }
-    .promo-star .promo-intro { font-size: 12px; letter-spacing: .08em; }
-    .promo-star .promo-price { font-size: 39px; letter-spacing: -.05em; color: #ffffff; text-shadow: 0 3px 0 rgba(9,9,9,.2); }
-    .promo-star .promo-note { font-size: 11px; letter-spacing: .04em; }
+    .promo-star { position: absolute; top: 30px; right: max(26px, calc((100vw - 1180px) / 2)); z-index: 2; width: 210px; aspect-ratio: 1; display: grid; place-items: center; background: linear-gradient(145deg, #ffd84d 0%, #ff9f1c 48%, #e50914 100%); color: #090909; clip-path: polygon(50% 0%, 61% 34%, 98% 35%, 68% 56%, 79% 91%, 50% 70%, 21% 91%, 32% 56%, 2% 35%, 39% 34%); filter: drop-shadow(0 24px 40px rgba(0,0,0,.42)); transform: rotate(8deg); }
+    .promo-star::before { content: ''; position: absolute; inset: 18px; background: rgba(255,255,255,.18); clip-path: inherit; }
+    .promo-star span { position: relative; display: grid; gap: 2px; place-items: center; max-width: 118px; text-align: center; line-height: .9; text-transform: uppercase; font-weight: 900; transform: rotate(-8deg); }
+    .promo-star .promo-intro { font-size: 15px; letter-spacing: .09em; }
+    .promo-star .promo-price { font-size: 55px; letter-spacing: -.06em; color: #ffffff; text-shadow: 0 4px 0 rgba(9,9,9,.24); }
+    .promo-star .promo-note { font-size: 12px; letter-spacing: .08em; line-height: 1; }
     .badge { display: inline-flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,.08); color: rgba(255,255,255,.92); font-weight: 800; margin-bottom: 24px; }
     .pulse { width: 10px; height: 10px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 0 rgba(34,197,94,.75); animation: pulse 1.8s infinite; }
     @keyframes pulse { 70% { box-shadow: 0 0 0 12px rgba(34,197,94,0); } 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); } }
@@ -260,10 +260,11 @@
       nav ul { display: none; }
       .hero-wrap, .why-grid, .contact-wrap, .testimonial { grid-template-columns: 1fr; }
       .hero { min-height: auto; }
-      .promo-star { top: 22px; right: 22px; width: 132px; }
-      .promo-star .promo-price { font-size: 32px; }
-      .promo-star .promo-intro { font-size: 10px; }
-      .promo-star .promo-note { font-size: 9px; }
+      .promo-star { top: 22px; right: 22px; width: 168px; }
+      .promo-star span { max-width: 96px; }
+      .promo-star .promo-price { font-size: 42px; }
+      .promo-star .promo-intro { font-size: 12px; }
+      .promo-star .promo-note { font-size: 10px; }
       .service-grid, .steps { grid-template-columns: 1fr 1fr; }
       .rating { text-align: left; }
       .quote-card { max-width: 640px; width: 100%; }
@@ -280,7 +281,11 @@
       .nav-cta { display: none; }
 
       .hero-wrap { width: 92%; padding: 48px 0 54px; gap: 28px; }
-      .promo-star { position: relative; top: auto; right: auto; justify-self: end; align-self: start; width: 122px; margin: 18px 4% -18px auto; }
+      .promo-star { position: relative; top: auto; right: auto; justify-self: end; align-self: start; width: 150px; margin: 18px 4% -10px auto; }
+      .promo-star span { max-width: 86px; }
+      .promo-star .promo-price { font-size: 37px; }
+      .promo-star .promo-intro { font-size: 11px; }
+      .promo-star .promo-note { font-size: 9px; }
       .badge { font-size: 12px; line-height: 1.3; padding: 9px 12px; margin-bottom: 18px; }
       h1 { font-size: clamp(38px, 12vw, 54px); letter-spacing: -.065em; margin-bottom: 18px; }
       h2 { font-size: clamp(30px, 9vw, 42px); letter-spacing: -.055em; }
@@ -338,6 +343,163 @@
       .contact-card, .contact-form, .moving-card { padding: 18px; }
     }
   </style>
+  <script>
+    (() => {
+      const es = {
+        "Skip to main content": "Saltar al contenido principal",
+        "Next day delivery available": "Entrega al dia siguiente disponible",
+        "Professional packing service": "Servicio profesional de empaque",
+        "Free estimates": "Estimados gratis",
+        "Services": "Servicios",
+        "Why Us": "Por que elegirnos",
+        "Process": "Proceso",
+        "FAQ": "Preguntas",
+        "Contact": "Contacto",
+        "Get Free Quote": "Cotizacion gratis",
+        "Reliable moving, delivery & storage in Los Angeles": "Mudanzas, entregas y almacenamiento confiables en Los Angeles",
+        "Move smarter. Move safer. Move with Diego.": "Mudate mas facil. Mudate seguro. Mudate con Diego.",
+        "Full-service residential moving, careful packing, punctual deliveries and secure storage solutions for families, apartments, offices and businesses across Los Angeles.": "Servicio completo de mudanza residencial, empaque cuidadoso, entregas puntuales y almacenamiento seguro para familias, apartamentos, oficinas y negocios en Los Angeles.",
+        "Request Free Estimate →": "Pide tu estimado gratis →",
+        "Chat on WhatsApp": "Chat por WhatsApp",
+        "Customer rating": "Calificacion de clientes",
+        "Local moving experts": "Expertos locales en mudanzas",
+        "Next day delivery": "Entrega al dia siguiente",
+        "Free Moving Estimate": "Estimado gratis de mudanza",
+        "Tell us what you need and we’ll help you plan a smooth, safe and efficient move.": "Cuentanos que necesitas y te ayudamos a planear una mudanza facil, segura y eficiente.",
+        "Full name": "Nombre completo",
+        "Phone number": "Numero de telefono",
+        "Service type": "Tipo de servicio",
+        "Move details": "Detalles de la mudanza",
+        "Residential Moving": "Mudanza residencial",
+        "Delivery of Goods": "Entrega de articulos",
+        "Professional Packing": "Empaque profesional",
+        "Secure Storage": "Almacenamiento seguro",
+        "Send Request on WhatsApp": "Enviar solicitud por WhatsApp",
+        "This opens WhatsApp with Diego's Moving LA.": "Esto abre WhatsApp con Diego's Moving LA.",
+        "Our Services": "Nuestros servicios",
+        "Everything you need for a clean, stress-free move.": "Todo lo que necesitas para una mudanza limpia y sin estres.",
+        "From full local moves to packing, delivery and storage, Diego’s Moving LA keeps your belongings protected from start to finish.": "Desde mudanzas locales completas hasta empaque, entrega y almacenamiento, Diego's Moving LA protege tus pertenencias de principio a fin.",
+        "Local Residential Moving": "Mudanza residencial local",
+        "Complete packing, transportation and unloading service for homes, apartments and condos in Los Angeles.": "Servicio completo de empaque, transporte y descarga para casas, apartamentos y condominios en Los Angeles.",
+        "Careful loading & unloading": "Carga y descarga cuidadosa",
+        "Furniture protection": "Proteccion de muebles",
+        "Local L.A. routes": "Rutas locales en L.A.",
+        "Safe, punctual delivery for furniture, products, boxes and personal items across the city.": "Entrega segura y puntual de muebles, productos, cajas y articulos personales en toda la ciudad.",
+        "Next day delivery options": "Opciones de entrega al dia siguiente",
+        "On-time scheduling": "Horarios puntuales",
+        "Safe product handling": "Manejo seguro de articulos",
+        "Accessible storage solutions for small items, furniture, equipment and belongings between moves.": "Soluciones de almacenamiento accesibles para articulos pequenos, muebles, equipo y pertenencias entre mudanzas.",
+        "Short or long-term storage": "Almacenamiento corto o largo plazo",
+        "Organized inventory": "Inventario organizado",
+        "Easy access solutions": "Soluciones de acceso facil",
+        "Our team packs your belongings with care to help reduce damage and make transport easier.": "Nuestro equipo empaca tus pertenencias con cuidado para reducir danos y facilitar el transporte.",
+        "Boxing and wrapping": "Cajas y envoltura",
+        "Fragile item protection": "Proteccion de articulos fragiles",
+        "Move-ready organization": "Organizacion lista para mudanza",
+        "Full-Service Moving": "Mudanza de servicio completo",
+        "From planning to the final box, we manage the move so you can focus on your next chapter.": "Desde la planeacion hasta la ultima caja, manejamos la mudanza para que te enfoques en tu nuevo comienzo.",
+        "Planning support": "Apoyo en la planeacion",
+        "Reliable crew": "Equipo confiable",
+        "Efficient execution": "Ejecucion eficiente",
+        "Free Estimates": "Estimados gratis",
+        "Get a personalized quote based on distance, items, packing needs and schedule.": "Recibe una cotizacion personalizada segun distancia, articulos, empaque y horario.",
+        "Fast response": "Respuesta rapida",
+        "Clear pricing": "Precios claros",
+        "WhatsApp support": "Soporte por WhatsApp",
+        "Google Reviews": "Resenas de Google",
+        "9 Google reviews": "9 resenas de Google",
+        "Google review": "Resena de Google",
+        "Verified Google review from a Diego's Moving LA customer.": "Resena verificada de un cliente de Diego's Moving LA.",
+        "Leave a Google Review": "Dejar una resena en Google",
+        "Professional": "Profesional",
+        "Careful handling": "Manejo cuidadoso",
+        "Trusted": "Confiable",
+        "Local L.A. mover": "Mudanza local en L.A.",
+        "Why Diego's Moving LA": "Por que Diego's Moving LA",
+        "Built for trust, speed and peace of mind.": "Hecho para confianza, rapidez y tranquilidad.",
+        "A moving company should do more than transport boxes. It should protect your time, your belongings and your confidence.": "Una compania de mudanzas debe hacer mas que transportar cajas. Debe proteger tu tiempo, tus pertenencias y tu confianza.",
+        "Reliable service": "Servicio confiable",
+        "A committed team focused on safe, efficient and professional moving support.": "Un equipo comprometido con un servicio de mudanza seguro, eficiente y profesional.",
+        "Fast scheduling": "Agenda rapida",
+        "Need it soon? Ask about next day delivery and fast estimate availability.": "Lo necesitas pronto? Pregunta por entrega al dia siguiente y estimados rapidos.",
+        "Careful protection": "Proteccion cuidadosa",
+        "Professional packing and item handling to reduce risk during transportation.": "Empaque profesional y manejo cuidadoso para reducir riesgos durante el transporte.",
+        "Simple Process": "Proceso simple",
+        "From quote to move day in four easy steps.": "Del estimado al dia de mudanza en cuatro pasos faciles.",
+        "Clean, simple and direct — because moving is already stressful enough.": "Claro, simple y directo, porque mudarse ya es bastante estresante.",
+        "Request a quote": "Pide una cotizacion",
+        "Send details about your move, delivery or storage needs.": "Envia detalles de tu mudanza, entrega o almacenamiento.",
+        "Plan the job": "Planeamos el trabajo",
+        "We confirm location, schedule, items and service level.": "Confirmamos ubicacion, horario, articulos y nivel de servicio.",
+        "Pack & protect": "Empacar y proteger",
+        "Our crew prepares your belongings for safe transport.": "Nuestro equipo prepara tus pertenencias para un transporte seguro.",
+        "Move with confidence": "Mudate con confianza",
+        "We transport, unload and help complete the move smoothly.": "Transportamos, descargamos y ayudamos a completar la mudanza sin complicaciones.",
+        "9 customer votes": "9 votos de clientes",
+        "Questions": "Preguntas",
+        "Frequently asked questions.": "Preguntas frecuentes.",
+        "What are your moving rates?": "Cuales son sus precios de mudanza?",
+        "Rates vary depending on distance, amount of belongings, packing needs and schedule. Contact us for a personalized quote.": "Los precios varian segun distancia, cantidad de pertenencias, empaque y horario. Contactanos para una cotizacion personalizada.",
+        "Do you offer packing service?": "Ofrecen servicio de empaque?",
+        "Yes. Our professional team can pack your belongings to help protect them during transport.": "Si. Nuestro equipo profesional puede empacar tus pertenencias para protegerlas durante el transporte.",
+        "Do you offer storage?": "Ofrecen almacenamiento?",
+        "Yes. Diego’s Moving LA offers secure and accessible storage solutions for items, furniture and equipment.": "Si. Diego's Moving LA ofrece almacenamiento seguro y accesible para articulos, muebles y equipo.",
+        "Do you offer delivery services?": "Ofrecen servicio de entrega?",
+        "Yes. We provide safe and punctual delivery of goods in the Los Angeles area.": "Si. Ofrecemos entrega segura y puntual de articulos en el area de Los Angeles.",
+        "Ready for a better move?": "Listo para una mejor mudanza?",
+        "Contact Diego’s Moving LA to receive a personalized quote and book your service.": "Contacta a Diego's Moving LA para recibir una cotizacion personalizada y reservar tu servicio.",
+        "Phone / WhatsApp": "Telefono / WhatsApp",
+        "Location": "Ubicacion",
+        "Service Area": "Area de servicio",
+        "Los Angeles and nearby areas": "Los Angeles y areas cercanas",
+        "Website": "Sitio web",
+        "Tell us about your move.": "Cuentanos sobre tu mudanza.",
+        "Name": "Nombre",
+        "Email": "Correo",
+        "Phone": "Telefono",
+        "Message": "Mensaje"
+      };
+
+      const esPlaceholders = {
+        "Full name": "Nombre completo",
+        "Phone number": "Numero de telefono",
+        "Tell us about your move": "Cuentanos sobre tu mudanza",
+        "Name": "Nombre",
+        "Email": "Correo",
+        "Phone": "Telefono",
+        "Message": "Mensaje"
+      };
+
+      const applySpanish = () => {
+        if (!navigator.language.toLowerCase().startsWith("es")) return;
+        document.documentElement.lang = "es";
+        document.title = "Diego's Moving LA | Mudanzas, entregas, empaque y almacenamiento en Los Angeles";
+        const description = document.querySelector('meta[name="description"]');
+        if (description) description.content = "Diego's Moving LA ofrece mudanzas residenciales, entregas, empaque profesional y almacenamiento seguro en Los Angeles, CA.";
+
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        const nodes = [];
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+        nodes.forEach((node) => {
+          const text = node.nodeValue.trim();
+          if (!text || !es[text]) return;
+          node.nodeValue = node.nodeValue.replace(text, es[text]);
+        });
+
+        document.querySelectorAll("[placeholder]").forEach((el) => {
+          const text = el.getAttribute("placeholder");
+          if (esPlaceholders[text]) el.setAttribute("placeholder", esPlaceholders[text]);
+        });
+
+        document.querySelectorAll("[aria-label]").forEach((el) => {
+          const text = el.getAttribute("aria-label");
+          if (es[text]) el.setAttribute("aria-label", es[text]);
+        });
+      };
+
+      document.addEventListener("DOMContentLoaded", applySpanish);
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -370,11 +532,11 @@
 
   <main id="main-content">
     <section class="hero" id="home">
-      <div class="promo-star" aria-label="Oferta especial: empezamos con 99 dolares, solo este mes">
+      <div class="promo-star" aria-label="Special offer: starting at 99 dollars, just this month">
         <span>
-          <strong class="promo-intro">Empezamos con</strong>
+          <strong class="promo-intro">Starting</strong>
           <strong class="promo-price">$99</strong>
-          <strong class="promo-note">Solo este mes</strong>
+          <strong class="promo-note">Just this month</strong>
         </span>
       </div>
       <div class="hero-wrap">
