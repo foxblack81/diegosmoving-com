@@ -468,7 +468,8 @@
       };
 
       const applySpanish = () => {
-        if (!navigator.language.toLowerCase().startsWith("es")) return;
+        const browserLanguage = (navigator.languages && navigator.languages[0] ? navigator.languages[0] : navigator.language || "en").toLowerCase();
+        if (!browserLanguage.startsWith("es")) return;
         document.documentElement.lang = "es";
         document.title = "Diego's Moving LA | Mudanzas, entregas, empaque y almacenamiento en Los Angeles";
         const description = document.querySelector('meta[name="description"]');
